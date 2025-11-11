@@ -1,0 +1,63 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #0f172a;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                 /* full viewport height */
+  overflow: hidden;
+}
+
+/* ------------- CENTERED WRAPPER ------------- */
+.center-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------- CHAKRA (BACK) ------------- */
+.chakra {
+  position: absolute;
+  width: 40vw;                   /* about one-third of screen width */
+  max-width: 600px;
+  min-width: 200px;
+  animation: spin infinite 20s linear;
+  z-index: 0;                    /* sits behind the Murugan image */
+  opacity: 0.95;                 /* optional subtle fade */
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ------------- MURUGAN (FRONT) ------------- */
+.murugan {
+  position: relative;
+  width: 28vw;                   /* smaller than chakra */
+  max-width: 450px;
+  min-width: 160px;
+  z-index: 1;                    /* above chakra */
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3)); /* gentle glow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chakra { width: 65vw; }
+  .murugan { width: 50vw; }
+}
+
+body {
+  background: radial-gradient(circle at center, #101b3b 0%, #0f172a 70%);
+}
+.app {
+  min-height: 100vh;          /* fill full height */
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;  /* ✅ match background */
+}

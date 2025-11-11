@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  width: 100vw;                   /* ✅ full viewport width */
+  display: flex;
+  justify-content: space-between; /* left and right alignment */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0b1220;      /* dark navy */
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;         /* keeps padding inside width */
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+
+.header__logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__link:hover {
+  color: #60a5fa;
+}
